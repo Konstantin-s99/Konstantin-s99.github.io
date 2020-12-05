@@ -19,21 +19,21 @@ document.addEventListener('DOMContentLoaded', function () {
 		//если валидация прошла успешно, то отправляем форму
 		if(error === 0) {
 			form.classList.add('_sending');
-			let response = await fetch('../sendmail.php', {
+			let response = await fetch('sendmail.php', {
 				method: 'POST',
 				body: formData
 			});
-			if (response.ok){
+			if (response.ok) {
 				let result = await response.json();
 				alert(result.message);
 				formPreview.innerHTML = '';
 				form.reset();
 				form.classList.remove('_sending');
-			}else{
+			} else {
 				alert("Ошибка");
 				form.classList.remove('_sending');
 			}
-		}else{
+		} else {
 			alert('Заполните обязательные поля');
 		}
 	}
@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			formRemoveError(input);
 
 			if (input.classList.contains('_email')) {
-				if (emailTest(input)){
+				if (emailTest(input)) {
 					formAddError(input);
 					error++;
 				}
-			}else if(input.getAttribute("type") === "checkbox" && input.checked === false){
+			} else if( input.getAttribute("type") === "checkbox" && input.checked === false) {
 				formAddError(input);
 				error++;
 			}else {
