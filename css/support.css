@@ -11,26 +11,6 @@ a {
 	text-decoration: none;
 }
 
-ul,
-ol,
-li {
-	list-style: none;
-}
-
-img {
-	vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-weight: inherit;
-	font-size: inherit;
-}
-
 html,
 body {
 	height: 100%;
@@ -40,17 +20,133 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+.container {
+	width: 1140px;
+	margin: 0 auto;
+	
+}
+
+/*------------------Раздел шапки-------------------*/
+.header__bg {
+	display: block;
+	/*background: linear-gradient(360deg, #000000 0%, rgba(122, 112, 101, 0.47) 100%), url('../img/support-bg.png')  no-repeat center top / cover;*/
+	background: linear-gradient(360deg, #000000 0%, rgba(122, 112, 101, 0.47) 100%), url('../img/head.png')  no-repeat center top / cover;
+	height: 101px;
+	min-width: 1440px;
+}
+
+.header {
+	background-color: #000;
+	padding: 5px 0px;
+	min-width: 1440px;
+}
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+.GameName {
+	font-style: normal;
+	font-weight: bold;
+	color: #fff;
+	font-size: 20px;
+	margin-left: 25px;
+	margin-right: 200px;
+}
+
+header a {
+	color: #fff;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+}
+
+.menu {
+	display: flex;
+	margin-left: auto;
+}
+
+.menu a { 
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.button-news, .button-wiki { 
+	display: block;
+	text-decoration: none;
+	width: 145px;
+	text-align: center;
+	padding: 15px 0 15px 0;
+}
+
+.dropbtn {
+	display: block;
+    width: 145px;
+    padding: 15px 0 15px 0;
+    text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    width: 145px;
+}
+
+.dropdown-content a {
+    float: none;
+    color: #fff;
+    padding: 10px 0px 10px 0px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.menu a:hover, .dropdown:hover .dropbtn {
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.4s linear, color 0.4s linear; 
+}
+
 /*--------------------------------*/
+
+.section__name {
+	display: flex;
+	align-items: center;
+	margin-top: 58px;
+}
+
+.section__name h1 {
+	color: #fff;
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 1.59em;
+}
 
 .form {
 	max-width: 550px;
-	margin: 0 auto;
+	margin: 0px auto 100px auto;
 	color: #fff;
-	padding: 30px 0;
+	padding-top: 20px;
 }
 
 .form *{
 	outline: none;
+}
+
+.form__question {
+	text-align: center;
+	font-size: 30px;
+	margin: 0px 0px 35px 0px;
+	letter-spacing: 1.14286px;
 }
 
 .form__body {
@@ -64,7 +160,7 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(51, 51, 51, 0.9) url('img/loading.gif') center / 50px no-repeat;
+	background: rgba(51, 51, 51, 0.9) url('../img/loading.gif') center / 50px no-repeat;
 	opacity: 0;
 	visibility: hidden;
 	transition: all 0.5s ease 0s;
@@ -76,9 +172,41 @@ body {
 }
 
 .form__title {
-	font-size: 40px;
+	font-size: 22px;
 	font-weight: bold;
-	margin: 0px 0px 30px 0px;
+	margin-bottom: 17px;
+	letter-spacing: 1.14286px;
+}
+
+.form h2 {
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 17px;
+	letter-spacing: 1.14286px;
+	line-height: 25px;
+}
+
+.form p {
+	font-size: 20px;
+	margin-bottom: 17px;
+	letter-spacing: 1.14286px;
+	line-height: 25px;
+}
+
+.form ul {
+	margin-bottom: 30px;
+}
+
+.form li {
+	font-size: 20px;
+	letter-spacing: 1.14286px;
+}
+
+.form li::before {
+    content: "•";
+    align-self: flex-start;
+    color: #fff;
+    margin-right: 15px;
 }
 
 .form__item {
@@ -111,63 +239,6 @@ body {
 textarea {
 	min-height: 120px;
 	resize: vertical;
-}
-
-.options {
-	padding: 10px 0px 0px 0px;
-}
-
-.options__item {
-	margin: 0px 0px 10px 0px;
-}
-
-.options__input {
-	display: none;
-}
-
-.options__input:checked + .options__label::after {
-	transform: scale(1);
-	
-}
-
-.options__label {
-	display: inline-flex;
-	font-size: 16px;
-	line-height: 140%;
-	align-items: center;
-	position: relative;
-	cursor: pointer;
-}
-
-.options__label::before {
-	content: "";
-	align-self: flex-start;
-	flex: 0 0 24px;
-	height: 24px;
-	background-color: #fff;
-	border-radius: 50%;
-	margin: 0px 10px 0px 0px;
-}
-
-.options__label::after {
-	transition: transform 0.3s ease 0s;
-	content: "";
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 16px;
-	height: 16px;
-	background-color: #7a956b;
-	border-radius: 50%;
-	transform: scale(0);
-}
-
-.select {
-	height: 50px;
-	width: 100%;
-	border-radius: 5px;
-	font-size: 18px;
-	padding: 0px 20px;
 }
 
 .file {
@@ -289,4 +360,69 @@ textarea {
 	background-color: #4f6146;
 	top: 3px;
 	box-shadow: 0 2px 0 #161b13;
+}
+
+/*------------Подвал------------*/
+
+footer {
+	background: #000;
+	height: 213px;
+	min-width: 1440px;
+}
+
+.footer-menu {
+	display: flex;
+	padding-top: 17px;
+	margin: 0px 0px 0px 120px;
+	justify-content: space-between;
+}
+
+.footer-menu li a { 
+	display: inline-block;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 18px;
+	color: #5E6468;
+	text-transform: uppercase;
+	margin-right: 114px;
+}
+
+
+.footer-menu li a:after {
+display: block; 
+content: ""; 
+height: 1px;
+width: 0%; 
+background-color: #5E6468; 
+transition: width 0.3s ease-in-out; 
+}
+
+.footer-menu li a:hover:after,
+.footer-menu li a:focus:after {
+width: 100%;
+}
+
+.footer-submenu {
+	margin-top: 28px;
+}
+
+.footer-submenu li {
+	margin-bottom: 11px;
+}
+
+.footer-submenu li a {
+	font-size: 13px;
+	line-height: 16px;
+	text-transform: none;
+	margin-right: 0px;
+}
+
+.rights {
+	color: #ACACAC;
+	font-weight: 500;
+	font-size: 9px;
+	line-height: 11px;
+	text-align: center;
+	margin-top: 40px;
 }

@@ -29,8 +29,9 @@ p {
 /*------------------Раздел шапки-------------------*/
 
 .header {
-	background: #000;
+	background-color: #000;
 	padding: 5px 0px;
+	min-width: 1440px;
 }
 ul, li {
 	display: block;
@@ -57,6 +58,7 @@ header a {
 
 .menu {
 	display: flex;
+	margin-left: auto;
 }
 
 .menu a { 
@@ -101,7 +103,7 @@ header a {
     display: block;
   }
 
-.nav a:hover, .dropdown:hover .dropbtn {
+.menu a:hover, .dropdown:hover .dropbtn {
     background-color: #fff;
     color: #000;
     transition: background-color 0.4s linear, color 0.4s linear; 
@@ -109,20 +111,26 @@ header a {
 
 /*-----------------Раздел превью-------------------*/
 
-.preview {
-	background: url('../img/header-bg.jpg') no-repeat center top / cover;
+.preview__color {
+	background: #1F1725;
 	height: 667px;
-	padding-top: 91px;
+}
+
+.preview {
+	background: url('../img/header-bg.png') no-repeat center top;
+	height: 667px;
+	padding-top: 50px;
+	min-width: 1440px; 
+	min-height: 667px;
 }
 
 .brief-description {
 	display: block;
 	width: 556px;
 	height: 556px;
-	background-color: #4E74D6;
     border-radius: 50%;
-    opacity: 0.75;
     padding-top: 81px;
+    background: rgba(255, 255, 255, 0.51);
 }
 
 .brief-description img{
@@ -146,45 +154,36 @@ header a {
     font-style: italic;
     font-weight: normal;
     color: #000;
-    margin: 29px 40px 0px 40px;
+    margin: 22px 40px 0px 40px;
     line-height: 1.76em;
 }
 
 .brief-description a{
 	display: block;
-    width: 70px;
-    height: 70px;
+    width: 110px;
+    height: 110px;
     background-color: #000;
     border-radius: 50%;
-    margin: 30px auto;
-    padding-top: 25.56px; 
+    margin: 17px auto;
+    padding-top: 47px;
     text-align: center;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 10px;
-	text-decoration: none;
-	color: #fff;
-	transition-duration: 0.5s;
-	transition-property: background-color, color;
+    font-size: 13px;
+    text-decoration: none;
+    color: #fff;
+    transition-duration: 0.5s;
+    transition-property: background-color, color;
 }
 
 .brief-description a:hover{
-	display: block;
-    width: 70px;
-    height: 70px;
     background-color: #fff;
-    border-radius: 50%;
-    margin: 30px auto;
-    padding-top: 25.56px; 
-    text-align: center;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 10px;
 	text-decoration: underline;
 	color: #000;
 }
 
 /*------------------Раздел описания игры-------------------*/
+.about-us {
+	min-width: 1440px;
+}
 
 .container-about-us {
 	margin: 0 auto;
@@ -204,6 +203,10 @@ header a {
 	height: 361px;
 }
 
+.swords-icon {
+	width: 110px;
+}
+
 .description {
 	width: 585px;
 }
@@ -221,11 +224,19 @@ header a {
 	margin-bottom: 30px; 
 }
 
+.description img {
+	border-radius: 25px;
+}
+
 hr {
 	border: 1px solid #ABABAB;
+	min-width: 1440px;
 }
 
 /*------------------Раздел медиатеки-------------------*/
+.media {
+	min-width: 1440px;
+}
 
 .SectionName {
 	display: flex;
@@ -251,14 +262,26 @@ hr {
 	margin-bottom: 122px;
 }
 
-.gallery-top a, .gallery-bottom a{
-	width: 262px;
-}
-
 .gallery-top img, .gallery-bottom img{
 	border-radius: 10px;
 	filter: drop-shadow(2px 5px 8px #1D2B52);
-	max-width: 100%;
+	width: 262px;
+	height: 264px;
+	object-fit: cover;
+	object-position: -78px;
+}
+
+#scr__5 {
+	object-position: -160px;
+}
+#scr__6 {
+	object-position: -40px;
+}
+#scr__7 {
+	object-position: -140px;
+}
+#scr__8 {
+	object-position: -100px;
 }
 
 .gallery-top img:hover, .gallery-bottom img:hover{
@@ -312,6 +335,9 @@ hr {
 /*------------------------------------------------*/
 
 /*------------------Раздел с популярными вопросами-------------------*/
+.questions {
+	min-width: 1440px;
+}
 
 .QuestionsHeader {
 	display: flex;
@@ -368,6 +394,7 @@ hr {
 .links {
 	background: #000;
 	height: 211px;
+	min-width: 1440px;
 }
 
 .links .container {
@@ -391,7 +418,7 @@ hr {
 	background: #C4C4C4;
 	width: 164px;
 	height: 38px;
-	padding: 8px 44px;
+	padding: 8px 38px;
 }
 
 .contacts {
@@ -415,12 +442,13 @@ hr {
 footer {
 	background: #000;
 	height: 203px;
+	min-width: 1440px;
 }
 
 .footer-menu {
 	display: flex;
 	padding-top: 17px;
-	margin: 0px 195px 0px 195px;
+	margin: 0px 0px 0px 120px;
 	justify-content: space-between;
 }
 

@@ -1,0 +1,4 @@
+host: localhost
+database: kostya99_website
+user: kostya99_website
+password: Vfvf89043811078gfgf

@@ -9,10 +9,58 @@
 	<title>Support</title>
 </head>
 <body>
-	<div class="wrapper">
+	<div class="header__bg"></div>
+	<header id="header" class="header">
+		<div class="container">
+			<div class="nav">
+				<a href="index.html"><img src="img/logo-game.svg" alt="Jack In The High Tower" class="logo"></a>
+			<div class="GameName">
+				Jack in The Dark Tower
+			</div>
+			<div class="menu">
+				<a href="news.php">
+					<div class="button-news">
+						Новости
+					</div>
+				</a>
+				<div class="dropdown">
+	    				<a href="training.html" class="dropbtn">
+	    					Об игре 
+	    				</a>
+	   				<div class="dropdown-content">
+	      				<a href="training.html">Обучение</a>
+	      				<a href="media.html">Медиа</a>
+	    			</div>
+	  			</div>
+	  			<div class="dropdown">
+	    				<a href="community.html" class="dropbtn">
+	    					Общение
+	    				</a>
+	   				<div class="dropdown-content">
+	      				<a href="support.html">Поддержка</a>
+	      				<a href="community.html">Социальные сети</a>
+	    			</div>
+	  			</div>
+			</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="section__name">
+			<h1>Поддержка</h1>
+			<img src="img/red-arrow.svg" alt="Arrow" class="arrow">
+		</div>
 		<div class="form">
+			<div class="form__question">Нужна помощь?</div>
 			<form action="#" id="form" class="form__body">
-				<h1 class="form__title">Отправка данных на почту</h1>
+				<h1 class="form__title">Создайте заявку</h1>
+				<h2>Задайте вопрос или опишите возникшую ситуацию</h2>
+				<p>Чтобы ускорить процесс обработки заявки, дополните её следующей информацией:</p>
+				<ul>
+					<li>
+						Скриншот, отражающий суть проблемы
+					</li>
+				</ul>
 				<div class="form__item">
 					<label for="formName" class="form__label">Имя*:</label>
 					<input id="formName" type="text" name="name" class="form__input _req">
@@ -22,32 +70,11 @@
 					<input id="formEmail" type="text" name="email" class="form__input _req _email">
 				</div>
 				<div class="form__item">
-					<div class="form__label">Левша или правша?</div>
-					<div class="options">
-						<div class="options__item">
-							<input id="formRightHanded" checked type="radio" value="right" name="hand" class="options__input">
-							<label for="formRightHanded" class="options__label"><span>Правша</span></label>
-						</div>
-						<div class="options__item">
-							<input id="formLeftHanded" type="radio" value="left" name="hand" class="options__input">
-							<label for="formLeftHanded" class="options__label"><span>Левша</span></label>
-						</div>
-					</div>
-				</div>
-				<div class="form__item">
 					<label for="formMessage" class="form__label">Сообщение:</label>
 					<textarea name="message" id="formMessage" class="form__input"></textarea>
 				</div>
 				<div class="form__item">
-					<div class="form__label">Возраст:</div>
-					<select name="age" class="select">
-						<option value="от 18 до 25" selected>Молодой</option>
-						<option value="от 25 до 45">Старый</option>
-						<option value="от 45">Супер стар</option>		
-					</select>
-				</div>
-				<div class="form__item">
-					<div class="form__label">Прикрепить фото</div>
+					<div class="form__label">Прикрепить изображение:</div>
 					<div class="file">
 						<div class="file__item">
 							<input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
@@ -66,6 +93,54 @@
 			</form>
 		</div>
 	</div>
+	 <footer>
+		<div class="container">
+			<div id="footer" class="footer">
+				<ul class="footer-menu">
+					<li>
+						<a href="news.php">
+							Новости
+						</a>
+					</li>	
+					<li>
+						<a href="training.html">
+							Об игре
+						</a>
+						<ul class="footer-submenu">
+							<li>
+								<a href="training.html">
+									Обучение
+								</a>
+							</li>
+							<li>
+								<a href="media.html">
+									Медиа
+								</a>
+							</li>
+						</ul>
+					</li>	
+					<li>
+						<a href="community.html">
+							Общение
+						</a>
+						<ul class="footer-submenu">
+							<li>
+								<a href="support.html">
+									Поддержка
+								</a>
+							</li>
+							<li>
+								<a href="community.html">
+									Социальные сети
+								</a>
+							</li>
+						</ul>
+					</li>	
+				</ul>
+				<div class="rights">©2020 All rights reserved.</div>
+			</div>
+		</div>
+	</footer>
 	<script type="text/javascript" src="libs/jquery-3.5.1.min.js"></script>
 	<script src="js/support.js"></script>
 </body>

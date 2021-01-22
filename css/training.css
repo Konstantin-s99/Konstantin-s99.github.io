@@ -1,0 +1,256 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	font-size: 14px;
+	background-color: #333;
+	font-family: 'Montserrat', sans-serif;
+}
+
+span {
+	color: #FF0000;
+	font-weight: bold;
+
+}
+
+.container {
+	width: 1140px;
+	margin: 0 auto;
+	
+}
+
+/*------------------Раздел шапки-------------------*/
+.header__bg {
+	display: block;
+	background: linear-gradient(360deg, #000000 0%, rgba(122, 112, 101, 0.47) 100%), url('../img/head.png')  no-repeat center top / cover;
+	height: 101px;
+	min-width: 1440px;
+}
+
+.header {
+	background-color: #000;
+	padding: 5px 0px;
+	min-width: 1440px;
+}
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+.GameName {
+	font-style: normal;
+	font-weight: bold;
+	color: #fff;
+	font-size: 20px;
+	margin-left: 25px;
+	margin-right: 200px;
+}
+
+header a {
+	color: #fff;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+}
+
+.menu {
+	display: flex;
+	margin-left: auto;
+}
+
+.menu a { 
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.button-news, .button-wiki { 
+	display: block;
+	text-decoration: none;
+	width: 145px;
+	text-align: center;
+	padding: 15px 0 15px 0;
+}
+
+.dropbtn {
+	display: block;
+    width: 145px;
+    padding: 15px 0 15px 0;
+    text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    width: 145px;
+}
+
+.dropdown-content a {
+    float: none;
+    color: #fff;
+    padding: 10px 0px 10px 0px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.menu a:hover, .dropdown:hover .dropbtn {
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.4s linear, color 0.4s linear; 
+}
+
+/*----------------------Раздел Об игре--------------------------------*/
+
+.about,
+.training {
+	min-width: 1440px;
+}
+
+.section__name {
+	display: flex;
+	align-items: center;
+	margin-top: 58px;
+}
+
+.section__name h1 {
+	color: #fff;
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 1.59em;
+}
+
+.game__about {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 54px 0px 144px 0px;
+}
+
+.game__picture {
+	width: 527px;
+	height: 357px;
+	object-fit: cover;
+	border-radius: 25px;
+}
+
+.game__description {
+	width: 555px;
+	font-size: 20px;
+	color: #fff;
+	line-height: 1.4em;
+}
+
+.game__description p {
+	margin-top: 27px;
+}
+
+/*----------------------Раздел обучение--------------------------------*/
+
+.training .section__name {
+	margin: 0px 0px 64px 0px;
+}
+
+.training__post {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 100px;
+}
+
+.post__picture {
+	width: 458px;
+	height: 299px;
+	object-fit: cover;
+	border-radius: 25px;
+	box-shadow: 0px 4px 40px 15px rgba(0, 0, 0, 0.75);
+}
+
+.post__description {
+	width: 555px;
+	font-size: 20px;
+	color: #fff;
+	line-height: 1.4em;
+}
+
+/*----------------------Подвал--------------------------------*/
+
+footer {
+	background: #000;
+	height: 203px;
+	min-width: 1440px;
+	margin-top: 170px;
+}
+
+.footer-menu {
+	display: flex;
+	padding-top: 17px;
+	margin: 0px 0px 0px 120px;
+	justify-content: space-between;
+}
+
+.footer-menu li a { 
+	display: inline-block;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 18px;
+	color: #5E6468;
+	text-transform: uppercase;
+	margin-right: 114px;
+}
+
+
+.footer-menu li a:after {
+	display: block; 
+	content: ""; 
+ 	height: 1px;
+	width: 0%; 
+	background-color: #5E6468; 
+	transition: width 0.3s ease-in-out; 
+}
+
+.footer-menu li a:hover:after,
+.footer-menu li a:focus:after {
+	width: 100%;
+}
+
+.footer-submenu {
+	margin-top: 28px;
+}
+
+.footer-submenu li {
+	margin-bottom: 11px;
+}
+
+.footer-submenu li a {
+	font-size: 13px;
+	line-height: 16px;
+	text-transform: none;
+	margin-right: 0px;
+}
+
+.rights {
+	color: #ACACAC;
+	font-weight: 500;
+	font-size: 9px;
+	line-height: 11px;
+	text-align: center;
+	margin-top: 40px;
+}
